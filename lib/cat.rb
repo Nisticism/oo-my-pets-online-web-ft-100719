@@ -9,6 +9,7 @@ class Cat
     @mood = mood
   end
   
+  def 
   
   
   
