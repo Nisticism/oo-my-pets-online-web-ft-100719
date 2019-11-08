@@ -50,18 +50,14 @@ class Owner
   end
   
   def walk_dogs
-    Dog.all.each do |dog|
-      if dog.owner == self 
-        dog.mood = "happy"
-      end
+    self.dogs.each do |dog|
+      dog.mood = "happy"
     end
   end
   
   def feed_cats
-    Cat.all.each do |cat|
-      if cat.owner == self
-        cat.mood = "happy"
-      end
+    self.cats.each do |cat|
+      cat.mood = "happy"
     end
   end
   
