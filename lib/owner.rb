@@ -41,7 +41,7 @@ class Owner
   
   def buy_cat(sale_cat)
     Cat.all.each do |cat|
-      if sale_cat.name == cat.name 
+      if sale_cat == cat.name 
         cat.owner = self
       end
     end
