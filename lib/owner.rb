@@ -56,17 +56,17 @@ class Owner
   end
   
   def feed_cats
-    self.cats.do |cat|
+    self.cats do |cat|
       cat.mood = "happy"
     end
   end
   
   def sell_pets
-    self.cats.do |cat|
+    self.cats do |cat|
       cat.mood = "nervous"
       cat.owner = nil 
     end
-    self.dogs.do |dog|
+    self.dogs do |dog|
       dog.mood = "nervous"
       dog.owner = nil 
     end
