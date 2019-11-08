@@ -72,4 +72,8 @@ class Owner
     end
   end
   
+  def list_pets
+    total_pets = []
+    self.cats
+  
 end
