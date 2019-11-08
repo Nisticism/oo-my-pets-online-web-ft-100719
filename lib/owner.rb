@@ -44,6 +44,11 @@ class Owner
     new_cat.owner = self
   end
   
+  def buy_dog(sale_dog_name)
+    new_dog = Dog.new(sale_dog_name)
+    new_dog.owner = self
+  end
+  
   def walk_dogs
     Dog.all.each do |dog|
       if dog.owner == self 
