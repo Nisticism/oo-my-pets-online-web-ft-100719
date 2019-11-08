@@ -26,7 +26,38 @@ class Owner
     @@all.clear
   end
   
+  def cats
+    Cat.all.select do |cat|
+      cat.owner.name == self.name
+    end
+  end
   
+  def buy_cat(sale_cat)
+    Cat.all.each do |cat|
+      if sale_cat.name == cat.name 
+        cat.owner = self
+      end
+    end
+  end
   
+  def walk_dogs
+    Dog.all.each do |dog|
+      if dog.owner == self 
+        dog.mood = "happy"
+      end
+    end
+  end
   
+  def feed_cats
+    Cat.all.each do |cat|
+      if cat.owner == self
+        cat.mood = "happy"
+      end
+    end
+  end
+  
+  def sell_pets
+    if self.cats
+  
+
 end
