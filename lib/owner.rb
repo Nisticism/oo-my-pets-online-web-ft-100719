@@ -74,7 +74,7 @@ class Owner
   
   def list_pets
     total_pets = []
-    Cat.all.each do |cat|
+    self.cats.each do |cat|
       if cat.owner == self
         total_pets << cat
       end
