@@ -74,6 +74,13 @@ class Owner
   
   def list_pets
     total_pets = []
-    self.cats
+    self.cats do |cat|
+      total_pets << cat
+    end
+    self.dogs do |dog|
+      total_pets << dog
+    end
+    total_pets
+  end
   
 end
