@@ -56,8 +56,10 @@ class Owner
   end
   
   def feed_cats
-    self.cats do |cat|
-      cat.mood = "happy"
+    Cat.all.each do |cat|
+      if cat.owner == self
+        cat.mood = "happy"
+      end
     end
   end
   
